@@ -1,8 +1,13 @@
 import os
+import sys
 import time
 import torch
 import argparse
 import numpy as np
+
+# Ensure the repository root is in sys.path so that `src` can be found
+# regardless of where this module is imported from.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from src.ernie_rna.tasks.ernie_rna import *
 from src.ernie_rna.models.ernie_rna import *
